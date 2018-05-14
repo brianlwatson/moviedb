@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Movies DB</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class = "status-bar">
+            <% if (userName) {%>
+                <h5 class="welcome-name">Logged in as: <%= userName%></h3>
+            <%} else {%>
+                <h5 class="welcome-name"><a href="/user/signup">Sign-Up</a> or <a href="/user/signin">Login</a> </h5>
+
+            <%}%>
+        </div>
+
+        <header class="navbar navbar-bright navbar-fixed-top">
+            <div class="container">
+                <div class="row navbar">
+                    <a href="/" class="navbar-brand col-2">Home</a>
+                    <a href="/movies" class="navbar-brand col-2">Movies</a>
+                    <a href="/user" class="navbar-brand col-2">Rate</a>
+                <class="col-6"></class>
+                </div>
+            </div>
+        </header>
+
+
+        <div class="jumbotron movies-home">
+            <h1 id="movies-text">Movie Database</h1>
+            <% if (userName) {%>
+                <h3 id="movies-text">Welcome, <%= userName%></h3>
+            <%} else {%>
+                <h3 id="movies-text">Please <a href="/user/signup">sign-up</a> or <a href="/user/signin">login</a> to continue</h3>
+            <%}%>
+
+            <% if (queryString === 'loginFailure') {%>
+                <h3 id="home-warning"><br/>You must be logged in to submit a rating!</h3>
+
+            <%} else {%>
+                <h3 id="home-warning"><br/><%= queryString%></h3>
+            <%}%>
+        </div>
+    </body>
+
+
+
+
+
+</html>

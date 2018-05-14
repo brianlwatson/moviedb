@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Movies DB</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+        <!--[if lt IE 9]>
+            <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link href="/css/styles.css" rel="stylesheet">
+    </head>
+
+
+    <body>
+        <div class = "status-bar">
+            <% if (userName) {%>
+                <h5 class="welcome-name">Logged in as: <%= userName%></h3>
+            <%} else {%>
+                <h5 class="welcome-name"><a href="/user/signup">Sign-Up</a> or <a href="/user/signin">Login</a> </h5>
+
+            <%}%>
+        </div>
+
+        <header class="navbar navbar-bright navbar-fixed-top">
+            <div class="container">
+                <div class="row navbar">
+                    <a href="/" class="navbar-brand col-2">Home</a>
+                    <a href="/movies" class="navbar-brand col-2">Movies</a>
+                    <a href="/user" class="navbar-brand col-2">Rate</a>
+                <class="col-6"></class>
+                </div>
+            </div>
+        </header>
+        
+            <div class="container movies-home jumbotron" id="movie-tile">
+                <div class="row">
+                <img class="card-img-top col-5 " src="https://image.tmdb.org/t/p/w300<%=movie.tmdbInfo.poster_path%>"
+                alt="Card image cap" id="movie-view-image">
+                    <div class="card-body col-7">
+                        <h5 class="card-title"><%= movie.tmdbInfo.title%></h5>
+                        <p class="card-text">User Rating: <%= movie.movieRating%></p>
+                        <p class="card-text">TMDB Rating: <%= movie.tmdbInfo.vote_average%></p>
+                        <p><strong>Description: </strong><%= movie.tmdbInfo.overview%></p>
+                    </div>
+                </div>
+            </div>
+    </body>
+</html>

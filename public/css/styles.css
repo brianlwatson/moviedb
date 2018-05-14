@@ -1,0 +1,120 @@
+/* override bootstrap styles */
+@import url('http://fonts.googleapis.com/css?family=Oswald:300,400:latin,latin-ext');
+
+.navbar-form input, .form-inline input {
+  width:auto;
+}
+
+body {
+  color:#646464;
+  background-color:#efefef;
+}
+
+h1,h2,h3,.highlight,.navbar a,#masthead h4 {
+  font-family:'Oswald',arial narrow,sans-serif;
+}
+
+
+.navbar.affix {
+  position:fixed;
+  top:0;
+  width:100%;
+}
+
+.top-spacer {
+  background-color:#ffffff;
+  height:40px;
+}
+
+a,a:hover {
+  color:#223344;
+  text-decoration:none;
+}
+
+.icon-bar {
+  background-color:#fff;
+}
+
+@media screen and (min-width: 768px) {
+  #masthead h1 {
+    font-size: 80px;
+  }
+}
+
+.navbar-bright{
+  background-color:#111166;
+  color:#fff;
+  margin-bottom: 0;
+  border-width: 0;
+}
+
+.navbar-bright a, .navbar-bright .navbar-brand, #masthead h4 {
+  color:#ccccdd;
+  font-size:14px;
+  text-transform: uppercase;
+  letter-spacing:.08em;
+}
+
+#movies-text{
+    text-align:middle;
+}
+
+.movies-home{
+    height: 300px;
+    width: 66%;
+    margin: 100px auto 0px auto;
+    border: 3px gray solid;
+}
+
+.movie-card{
+  width:50%;
+  padding:20px;
+}
+
+#movie-tile{
+  width:80%;
+  height:150%;
+  margin: 80px auto;
+  max-height:400px;
+}
+
+#movie-view-image{
+  height: auto;
+  width: auto;
+  max-height: 300px;
+  max-width: 300px;
+}
+
+.movie-tile-img{
+  height: auto;
+  width: auto;
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+}
+
+.movie-row {
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.movie-list {
+  width: 100%;
+  margin: auto;
+}
+
+#home-warning{
+  color: red;
+}
+
+.welcome-name {
+  text-align:right;
+  margin-right:20px;
+  height:40px;
+}
+
+.welcome-name {
+  padding-top: 10px;
+  vertical-align:middle;
+}
