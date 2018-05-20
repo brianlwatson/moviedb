@@ -73,15 +73,15 @@ a,a:hover {
 
 #movie-tile{
   width:80%;
-  height:150%;
+  height:500px;
   margin: 80px auto;
-  max-height:400px;
+  max-height:500px;
 }
 
 #movie-view-image{
   height: auto;
   width: auto;
-  max-height: 300px;
+  max-height: 400px;
   max-width: 300px;
 }
 
@@ -90,7 +90,7 @@ a,a:hover {
   width: auto;
   max-height: 200px;
   max-width: 200px;
-  margin: auto;
+  margin: 0px auto;
 }
 
 .movie-row {
@@ -117,4 +117,16 @@ a,a:hover {
 .welcome-name {
   padding-top: 10px;
   vertical-align:middle;
+}
+
+#search-tile{
+  width:80%;
+  height:300;
+  margin: 80px auto;
+  max-height:5300px;
+}
+
+#search-view-image{
+  max-height: 150px;
+  max-width: 150px;
 }

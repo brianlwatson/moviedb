@@ -1,0 +1,21 @@
+<div class = "status-bar">
+        <% if (userName) {%>
+            <h5 class="welcome-name">Logged in as: <%= userName%></h3>
+        <%} else {%>
+            <h5 class="welcome-name"><a href="/user/signup">Sign-Up</a> or <a href="/user/signin">Login</a> </h5>
+        <%}%>
+    </div>
+
+    <header class="navbar navbar-bright navbar-fixed-top">
+        <div class="container">
+            <div class="row navbar">
+                <a href="/" class="navbar-brand col-2">Home</a>
+                <a href="/movies" class="navbar-brand col-2">Movies</a>
+                <a href="/user" class="navbar-brand col-2">Rate</a>
+                <% if (userName) {%>
+                    <a href="user/signout" class="navbar-brand col-2">Sign Out</a></h5>
+                <%}%>
+            <class="col-6"></class>
+            </div>
+        </div>
+    </header>

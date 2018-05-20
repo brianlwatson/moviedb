@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include partials/header %>
+    </head>
+
+    <body>
+        <% include partials/navbar %>
+
+
+        <%for(var i = 0; i < movies.length; i++) {%> 
+            <div class="container movies-home jumbotron" id="search-tile">
+                <div class="row">
+                <img class="card-img-top col-5 " src="https://image.tmdb.org/t/p/w300<%=movies[i].poster_path%>"
+                alt="Card image cap" id="search-view-image">
+                    <div class="card-body col-7">
+                        <div class="row">
+                            <div class="col-10" id="search-content">
+                                <h5 class="card-title"><%= movies[i].title%></h5>
+                                <p class="card-text">TMDB Rating: <%= movies[i].vote_average%></p>
+                                <p><strong>Release Date: </strong><%= movies[i].release_date%></p>
+                            </div>
+                            <div class="col-2" id="search-rating">
+                                <form name="submitRating" action="/user/submit/<%=i%>" method="post">
+                                    Rating: <input name="movieRating" id="movieRating"/><br/>
+                                    <input type="submit" value="Submit " />
+                                </form>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <%}%>
+
+    </body>
+</html>
